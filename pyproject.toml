@@ -1,0 +1,38 @@
+# ===============================
+#   Boilerplate pyproject.toml
+#   Author: Chris Keller
+#   Email: cakesbox@outlook.com
+# ===============================
+
+[tool.poetry]
+name = "chinese-numbers"
+version = "1.0.0"
+description = "Convert Arabic numerals to Chinese numerals (Simplified/Traditional) with idiomatic support."
+authors = ["Your Name <your.email@example.com>"]
+license = "MIT"
+readme = "README.md"
+
+packages = [{ include = "chinese_numbers", from = "src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+
+# * denotes modules under review, not
+#   yet approved for production use
+pytest = "^8.4.2"
+
+[tool.poetry.group.dev.dependencies] 
+pytest = "^8.0.0"
+
+[build-system]
+requires = ["poetry-core>=2.0"]
+build-backend = "poetry.core.masonry.api"
+
+# pytest configuration
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["src/tests"]
+
+# runnable script configuration (for src/example which is the only standalone script in this package)
+[tool.poetry.scripts]
+example = "example:main"

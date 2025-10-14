@@ -54,7 +54,7 @@ htmlcov/
 .ipynb_checkpoints
 
 # VS Code (optional)
-# .vscode/
+.vscode/
 
 # macOS
 .DS_Store
@@ -63,3 +63,6 @@ htmlcov/
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+
+# github coding assistant files
+.github/copilot*.md
