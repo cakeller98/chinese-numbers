@@ -12,8 +12,9 @@ authors = ["Your Name <your.email@example.com>"]
 license = "MIT"
 readme = "README.md"
 
-packages = [{ include = "chinese_numbers", from = "src" }]
-
+packages = [
+    { include = "chinese_numbers", from = "src" }    ]
+    
 [tool.poetry.dependencies]
 python = ">=3.11,<4.0"
 
@@ -35,4 +36,5 @@ testpaths = ["src/tests"]
 
 # runnable script configuration (for src/example which is the only standalone script in this package)
 [tool.poetry.scripts]
-example = "example:main"
+example = "example.__main__:main"
+example2 = "example2.__main__:main"

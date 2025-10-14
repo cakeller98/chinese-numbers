@@ -43,9 +43,15 @@ To use in your own code:
 ```python
 from chinese_numbers.converter import ChineseNumberConverter
 
-converter = ChineseNumberConverter(use_traditional=True)  # or False for Simplified
-result = converter.convert("123456789")
-print(result)
+converter = ChineseNumberConverter(use_traditional=False)  # Simplified by default
+number = "12345"
+result = converter.convert(number)
+print(f"{number} -> {result}")
+```
+
+```sh
+# Example output:
+Input Number: 123456789 -> Chinese: 一億二千三百四十五萬六千七百八十九
 ```
 
 For interactive exploration, see `src/playtime/__main__.py` for a script that generates random numbers and shows their Chinese numeral forms and groupings.

@@ -19,8 +19,7 @@ def clean_number_string(raw: str, locale_str: str = '', ultra_strict: bool = Fal
     """
     s = str(raw)
     if not ultra_strict:
-        s = s.replace(' ', '')
-        print(f"DEBUG: clean_number_string: stripped spaces: '{s}'")
+        s = s.replace(" ", "")
     if locale_str:
         locale.setlocale(locale.LC_ALL, locale_str)
     else:
@@ -28,7 +27,6 @@ def clean_number_string(raw: str, locale_str: str = '', ultra_strict: bool = Fal
     try:
         number = locale.atoi(s)
         if not isinstance(number, int) or number < 0:
-            print(f"DEBUG: clean_number_string: invalid number: '{s}'")
             raise ValueError(f"Invalid input: {raw}")
         return str(number)
     except ValueError:

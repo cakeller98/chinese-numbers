@@ -51,7 +51,7 @@ def better_generator(number_of_digits):
     other_digits = ''.join(str(random.randint(0, 9)) for _ in range(number_of_digits - 1))
     return first_digit + other_digits
 
-def main(number_of_lines=80, output_file="output.csv"):
+def example(number_of_lines=80, output_file="output.csv"):
     """
     Generate and convert number_of_lines random numbers and print them with their simplified chinese numeral and grouping into a csv file.
     because the arabic numbers print with comma grouping for the inputs, we need to put the input in quotes in the csv file.
@@ -66,10 +66,12 @@ def main(number_of_lines=80, output_file="output.csv"):
             print(f"Converted {input_str} to {simplified} with grouping {grouping}")
 
 
-
-if __name__ == "__main__":
-    
+def main():
     start_time = time.time()
-    main(number_of_lines=8000, output_file="output.csv")
+    example(number_of_lines=8000, output_file="output.csv")
     end_time = time.time()
     print(f"Execution time: {end_time - start_time:.2f} seconds")
+
+
+if __name__ == "__main__":
+    main()
