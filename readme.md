@@ -43,7 +43,7 @@ To use in your own code:
 ```python
 from chinese_numbers.converter import ChineseNumberConverter
 
-converter = ChineseNumberConverter(use_traditional=False)  # Simplified by default
+converter = ChineseNumberConverter(use_traditional=False) # Simplified by default
 number = "12345"
 result = converter.convert(number)
 print(f"{number} -> {result}")
